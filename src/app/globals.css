@@ -1,0 +1,35 @@
+@import 'tailwindcss';
+
+@theme {
+  /* colors */
+  --color-semi-dark-navy: #1f3641;
+  --color-dark-navy: #1a2a33;
+  --color-light-blue: #31c3bd;
+  --color-semi-light-blue: #65e9e4;
+  --color-light-yellow: #f2b137;
+  --color-semi-light-yellow: #ffc860;
+  --color-silver: #a8bfc9;
+  --color-semi-silver: #dbe8ed;
+
+  /* text format */
+
+  --text-xs: 1rem;
+  --text-xs--letter-spacing: 1px;
+
+  --text-small: 1.25rem;
+  --text-small--letter-spacing: 1.25px;
+
+  --text-medium: 1.5rem;
+  --text-medium--letter-spacing: 1.5px;
+
+  --text-large: 2.5rem;
+  --text-large--letter-spacing: 2.5px;
+
+  --text-body: 0.875rem;
+  --text-body--letter-spacing: 0.8px;
+}
+
+body {
+  background: black;
+  font-family: 'Outfit', sans-serif;
+}
