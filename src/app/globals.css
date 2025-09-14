@@ -1,11 +1,29 @@
 @import 'tailwindcss';
 
 @theme {
+  /* spacing */
+  --spacing-2.25: 0.563rem;
+  --spacing-2.75: 0.688rem;
+  --spacing-3.75: 0.938rem;
+  --spacing-4.25: 1.063rem;
+  --spacing-12.5: 3.125rem;
+  --spacing-13.5: 3.375rem;
+  --spacing-20.75: 5.188rem;
+  --spacing-33: 8.25rem;
+  --spacing-35: 8.75rem;
+  --spacing-49.5: 12.375rem;
+  --spacing-51: 12.75rem;
+  --spacing-81.75: 20.438rem;
+  --spacing-115: 28.75rem;
+
   /* colors */
   --color-semi-dark-navy: #1f3641;
+  --color-very-dark: #10212a;
   --color-dark-navy: #1a2a33;
+  --color-dark-blue: #118c87;
   --color-light-blue: #31c3bd;
   --color-semi-light-blue: #65e9e4;
+  --color-dark-yellow: #cc8b13;
   --color-light-yellow: #f2b137;
   --color-semi-light-yellow: #ffc860;
   --color-silver: #a8bfc9;
@@ -15,6 +33,7 @@
 
   --text-xs: 1rem;
   --text-xs--letter-spacing: 1px;
+  --text-xs--line-height: 1.3;
 
   --text-small: 1.25rem;
   --text-small--letter-spacing: 1.25px;
@@ -27,6 +46,11 @@
 
   --text-body: 0.875rem;
   --text-body--letter-spacing: 0.8px;
+  --text-body--line-height: 1.3;
+
+  /* border-radius */
+  --radius-10px: 0.625rem;
+  --radius-15px: 0.938rem;
 }
 
 body {
