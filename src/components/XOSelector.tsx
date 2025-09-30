@@ -1,8 +1,9 @@
+import { BoardValue } from '@/app/page';
 import Image from 'next/image';
 
 interface XOSelectorProps {
-  selected: 'X' | 'O';
-  onSelect: (value: 'X' | 'O') => void;
+  selected: 'X' | 'O' | null;
+  onSelect: (markers: BoardValue) => void;
 }
 
 export function XOSelector({ selected, onSelect }: Readonly<XOSelectorProps>) {
