@@ -24,15 +24,9 @@ export default function Home() {
   return (
     <>
       {playerMarkers.X === null ? (
-        <HomeScreen
-          playerMarkers={playerMarkers}
-          setPlayerMarkers={setPlayerMarkers}
-        />
+        <HomeScreen setPlayerMarkers={setPlayerMarkers} />
       ) : (
-        <BoardScreen
-          playerMarkers={playerMarkers}
-          setPlayerMarkers={setPlayerMarkers}
-        />
+        <BoardScreen playerMarkers={playerMarkers} />
       )}
     </>
   );

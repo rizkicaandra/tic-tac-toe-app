@@ -5,11 +5,15 @@ import Image from 'next/image';
 
 interface BoardHeaderProps {
   currentPlayer: BoardValue;
+  handleRestart: () => void;
 }
 
-export function BoardHeader({ currentPlayer }: Readonly<BoardHeaderProps>) {
+export function BoardHeader({
+  currentPlayer,
+  handleRestart,
+}: Readonly<BoardHeaderProps>) {
   return (
-    <div className='mb-16 flex items-center justify-between'>
+    <div className='mb-16 flex items-center justify-between md:mb-5'>
       <Image src='/images/logo.svg' width={71.22} height={31.74} alt={'logo'} />
 
       {/* turn indicator */}
@@ -22,11 +26,12 @@ export function BoardHeader({ currentPlayer }: Readonly<BoardHeaderProps>) {
           width: 15,
           height: 15,
           alt: 'icon-restart',
+          className: 'md:h-5 md:w-5',
         }}
         color='silver'
         height='xs'
-        width='w-10'
-        onClick={() => {}}
+        width='w-10 md:w-13'
+        onClick={handleRestart}
       />
     </div>
   );

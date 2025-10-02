@@ -1,6 +1,10 @@
+import { PlayerMarkerState } from '@/app/page';
 import { winner } from '../components/BoardScreen';
 
-export function checkWinnerWithLine(board: ('X' | 'O' | null)[]): winner {
+export function checkWinnerWithLine(
+  board: ('X' | 'O' | null)[],
+  playerMarkers: PlayerMarkerState,
+): winner {
   const lines = [
     [0, 1, 2],
     [3, 4, 5],
@@ -16,9 +20,39 @@ export function checkWinnerWithLine(board: ('X' | 'O' | null)[]): winner {
   for (const line of lines) {
     const [a, b, c] = line;
     if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+      let info = '';
+
+      const isVersusCpu =
+        playerMarkers.X === 'cpu' || playerMarkers.O === 'cpu';
+
+      if (playerMarkers.X === 'cpu' && board[a] === 'X') {
+        info = 'OH NO, YOU LOST...';
+      }
+
+      if (playerMarkers.O === 'cpu' && board[a] === 'O') {
+        info = 'OH NO, YOU LOST...';
+      }
+
+      if (playerMarkers.X === 'p1' && board[a] === 'X') {
+        info = isVersusCpu ? 'YOU WON!' : 'PLAYER 1 WON!';
+      }
+
+      if (playerMarkers.O === 'p1' && board[a] === 'O') {
+        info = isVersusCpu ? 'YOU WON!' : 'PLAYER 1 WON!';
+      }
+
+      if (playerMarkers.X === 'p2' && board[a] === 'X') {
+        info = 'PLAYER 2 WON!';
+      }
+
+      if (playerMarkers.O === 'p2' && board[a] === 'O') {
+        info = 'PLAYER 2 WON!';
+      }
+
       return {
         player: board[a],
         line,
+        info,
       };
     }
   }
@@ -28,6 +62,7 @@ export function checkWinnerWithLine(board: ('X' | 'O' | null)[]): winner {
     return {
       player: 'TIE', // Using a special value like 'TIE' to indicate a tie
       line: [],
+      info: '',
     };
   }
 
@@ -35,5 +70,6 @@ export function checkWinnerWithLine(board: ('X' | 'O' | null)[]): winner {
   return {
     player: null,
     line: [],
+    info: '',
   };
 }
