@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/rizkicaandra/tic-tac-toe-app)
-- Live Site URL: [Live Demo](https://magnificent-tartufo-976891.netlify.app/)
+- Live Site URL: [Live Demo](https://sensational-lollipop-1eb4e9.netlify.app/)
 
 ## My process
 
