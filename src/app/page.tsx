@@ -16,7 +16,7 @@ export type BoardValue = 'X' | 'O' | null;
 // --- End New Type Definitions ---
 
 export default function Home() {
-  let [playerMarkers, setPlayerMarkers] = useState<PlayerMarkerState>({
+  const [playerMarkers, setPlayerMarkers] = useState<PlayerMarkerState>({
     X: null,
     O: null,
   });

@@ -48,6 +48,7 @@ export function BoardScreen({ playerMarkers }: Readonly<BoardScreenProps>) {
 
   useEffect(() => {
     handleBot(board, currentPlayer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [bot]);
 
   const handleBot = (board: Board, nextPlayer: BoardValue) => {
@@ -139,7 +140,7 @@ export function BoardScreen({ playerMarkers }: Readonly<BoardScreenProps>) {
     setIsCpuThinking(false);
     setBoard(Array(9).fill(null));
 
-    let nextPlayer = winner.player !== 'TIE' ? winner.player : currentPlayer;
+    const nextPlayer = winner.player !== 'TIE' ? winner.player : currentPlayer;
 
     setCurrentPlayer(nextPlayer);
 

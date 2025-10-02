@@ -43,7 +43,11 @@ export function Button({
       className={`text-dark-navy cursor-pointer text-xs font-bold ${heightMap?.[height]} ${colorMap?.[color]} flex items-center justify-center ${width} `}
       onClick={onClick}
     >
-      {typeof label === 'string' ? label : <Image {...label} />}
+      {typeof label === 'string' ? (
+        label
+      ) : (
+        <Image {...label} alt='button-icon' />
+      )}
     </button>
   );
 }

@@ -10,7 +10,7 @@ export interface HomeScreenProps {
 }
 
 export function HomeScreen({ setPlayerMarkers }: Readonly<HomeScreenProps>) {
-  let [xo, setXo] = useState<BoardValue>('X');
+  const [xo, setXo] = useState<BoardValue>('X');
 
   const setPlayer = (playerId: PlayerId) => {
     switch (xo) {
