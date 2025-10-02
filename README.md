@@ -1,6 +1,6 @@
 # Frontend Mentor - Tic Tac Toe solution
 
-This is a solution to the [Tic Tac Toe challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tic-tac-toe-game-Re7ZF_E2v). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Tic Tac Toe challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tic-tac-toe-game-Re7ZF_E2v). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -26,11 +26,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot.png)
 
 ### Links
 
-- Solution URL: [GitHub](https://github.com/rizkicaandra/password-generator-app)
+- Solution URL: [GitHub](https://github.com/rizkicaandra/tic-tac-toe-app)
 - Live Site URL: [Live Demo](https://magnificent-tartufo-976891.netlify.app/)
 
 ## My process

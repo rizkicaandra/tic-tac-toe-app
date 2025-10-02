@@ -1,7 +1,7 @@
 import { BoardValue, PlayerMarkerState } from '@/app/page';
 import { Board } from '../components/BoardScreen';
 
-const isVersusCpu = (
+export const isVersusCpu = (
   player: PlayerMarkerState,
   nextPlayer: BoardValue,
 ): boolean => {
@@ -82,13 +82,12 @@ export const executeBot = async (
   board: Board,
   player: PlayerMarkerState,
   nextPlayer: BoardValue,
-) => {
+): Promise<number> => {
   const isCpu = isVersusCpu(player, nextPlayer);
   if (!isCpu) return 0;
 
-  let move: number = 0;
-
-  await new Promise((resolve) => setTimeout(() => resolve, 3000));
+  // Add delay to simulate CPU thinking
+  await new Promise((resolve) => setTimeout(resolve, 2000));
 
   return getBestMove(board, player);
 };

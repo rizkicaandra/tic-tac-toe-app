@@ -1,7 +1,15 @@
 import Image from 'next/image';
 
 export interface ButtonProps {
-  label: string | { src: string; width: number; height: number; alt: string };
+  label:
+    | string
+    | {
+        src: string;
+        width: number;
+        height: number;
+        alt: string;
+        className?: string;
+      };
   color: 'yellow' | 'blue' | 'silver';
   height?: 'small' | 'medium' | 'large' | 'xs';
   width?: string;
@@ -22,8 +30,9 @@ export function Button({
   };
 
   const heightMap: Record<string, string> = {
-    xs: 'border-b-4 pt-3 pb-2.25 rounded-5px',
-    small: 'border-b-4 py-3.75 rounded-15px',
+    xs: 'border-b-4 pt-3 pb-2.25 rounded-5px md:pt-3.75 md:pb-3 md:text-small',
+    small:
+      'border-b-4 py-3.75 rounded-15px md:rounded-10px md:text-xs md:py-3.5',
     medium: 'border-b-8 py-3.5 rounded-15px md:py-4.25',
     large: 'border-b-8 py-4.25 rounded-15px',
   };
@@ -31,7 +40,7 @@ export function Button({
   return (
     <button
       type='button'
-      className={`text-dark-navy md:text-small cursor-pointer text-xs font-bold ${heightMap?.[height]} ${colorMap?.[color]} flex items-center justify-center ${width} `}
+      className={`text-dark-navy cursor-pointer text-xs font-bold ${heightMap?.[height]} ${colorMap?.[color]} flex items-center justify-center ${width} `}
       onClick={onClick}
     >
       {typeof label === 'string' ? label : <Image {...label} />}

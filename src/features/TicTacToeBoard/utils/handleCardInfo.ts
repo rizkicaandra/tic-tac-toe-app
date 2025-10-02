@@ -19,7 +19,7 @@ export const handleCardInfo = (playerMarkers: PlayerMarkerState) => {
 
   // Handle Player vs. Player cases
   return {
-    X: X === 'p1' ? 'X (You)' : 'X (P2)',
-    O: O === 'p1' ? 'O (You)' : 'O (P2)',
+    X: X === 'p1' ? 'X (P1)' : 'X (P2)',
+    O: O === 'p1' ? 'O (P1)' : 'O (P2)',
   };
 };
